@@ -42,7 +42,7 @@ function titleCase(title, minorWords) {
     for (let i = 0; i < judul.length; i++) {
         for (let j = 0; j < judul[i].length; j++) {
             if (j == 0) {
-                string += judul[i][j].toUpperCase()
+                string += judul[i][j].toUpperCas()
             } else if (j != 0) {
                 string += judul[i][j]
             }

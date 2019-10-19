@@ -35,5 +35,18 @@ function validBraces(braces) {
     return tracer.length === 0
 }
 
-console.log(validBraces("()"), true);
-console.log(validBraces("[(])"), false);
+console.log(validBraces("()")) // true
+console.log(validBraces("[]")) // true
+console.log(validBraces("{}")) // true
+console.log(validBraces("(){}[]")) // true
+console.log(validBraces("([{}])")) // true
+console.log(validBraces("(}")) // false
+console.log(validBraces("[(])")) // false
+console.log(validBraces("({})[({})]")) // true
+console.log(validBraces("(})")) // false
+console.log(validBraces("(({{[[]]}}))")) //true
+console.log(validBraces("{}({})[]")) // true
+console.log(validBraces(")(}{][")) // false
+console.log(validBraces("())({}}{()][][")) // false
+console.log(validBraces("(((({{")) // false
+console.log(validBraces("}}]]))}])")) // false

@@ -7,28 +7,29 @@ toCamelCase("the-stealth-warrior") // returns "theStealthWarrior"
 
 toCamelCase("The_Stealth_Warrior") // returns "TheStealthWarrior"
 */
-
-if (str.length == 0) {
-    return ''
-} else {
-    let result = []
-    let temp = ''
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] != '-' && str[i] != '_') {
-            temp += str[i]
-        } else {
-            result.push(temp)
-            temp = ''
+function toCamelCase(str) {
+    if (str.length == 0) {
+        return ''
+    } else {
+        let result = []
+        let temp = ''
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] != '-' && str[i] != '_') {
+                temp += str[i]
+            } else {
+                result.push(temp)
+                temp = ''
+            }
         }
-    }
-    result.push(temp)
-    let string = ''
-    for (let j = 0; j < result.length; j++) {
-        for (let k = 0; k < result[j].length; k++) {
-            j >= 1 && k == 0 ? string += result[j][0].toUpperCase() : string += result[j][k]
+        result.push(temp)
+        let string = ''
+        for (let j = 0; j < result.length; j++) {
+            for (let k = 0; k < result[j].length; k++) {
+                j >= 1 && k == 0 ? string += result[j][0].toUpperCase() : string += result[j][k]
+            }
         }
+        return string
     }
-    return string
 }
 
 console.log(toCamelCase('')) //, '', "An empty string was provided but not returned")

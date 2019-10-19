@@ -35,6 +35,25 @@ function scramble(str1, str2) {
     }
     return true
 }
+/*
+//<<<=== fastest execution time ===>>>
+
+function scramble(str1, str2) {
+    //code me
+    var obj = {};
+    for (var i = 0; i < str1.length; i++) {
+        !obj[str1[i]] ? obj[str1[i]] = 1 : obj[str1[i]]++;
+    }
+    for (var j = 0; j < str2.length; j++) {
+        if (!obj[str2[j]]) {
+            return false;
+        } else {
+            obj[str2[j]]--;
+        }
+    }
+    return true;
+}
+*/
 
 console.log(scramble('scriptjavx', 'javascript'), false);
 console.log(scramble('rkqodlw', 'world'), true);

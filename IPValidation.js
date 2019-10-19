@@ -74,6 +74,11 @@ function isValidIP(str) {
 /*
 const isValidIP = str => str.match(/^(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])$/) ? true : false
 */
+/*
+function isValidIP(str) {
+    return /^(([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])(\.(?!$)|$)){4}$/.test(str)
+}
+*/
 console.log(isValidIP("0.0.0.0"), true);
 console.log(isValidIP("12.255.56.1"), true);
 console.log(isValidIP("137.255.156.100"), true);

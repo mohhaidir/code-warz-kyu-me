@@ -19,17 +19,9 @@ function iqTest(numbers) {
     let odd = []
     let even = []
     for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] % 2 == 1) {
-            odd.push(i + 1)
-        } else if (numbers[i] % 2 == 0) {
-            even.push(i + 1)
-        }
+        numbers[i] % 2 == 1 ? odd.push(i + 1) : even.push(i + 1)
     }
-    if (odd.length > even.length) {
-        return even[0]
-    } else {
-        return odd[0]
-    }
+    return odd.length > even.length ? even[0] : odd[0]
 }
 
 console.log(iqTest("2 4 7 8 10"), 3);

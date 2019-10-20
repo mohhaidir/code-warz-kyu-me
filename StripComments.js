@@ -23,19 +23,21 @@ function solution(input, markers) {
     let arr = input.split('\n');
     let mark;
     for (let i in arr) {
-        if (arr[i].indexOf(markers[0]) !== -1) mark = arr[i].indexOf(markers[0]);
-        else if (arr[i].indexOf(markers[1]) !== -1) mark = arr[i].indexOf(markers[1]);
-        else continue;
-        arr[i] = arr[i].slice(0, mark - 1);
+        if (arr[i].indexOf(markers[0]) !== -1) {
+            mark = arr[i].indexOf(markers[0])
+        } else if (arr[i].indexOf(markers[1]) !== -1) {
+            mark = arr[i].indexOf(markers[1])
+        } else continue
+        arr[i] = arr[i].slice(0, mark - 1)
     }
-    return arr.join('\n');
-};
+    return arr.join('\n')
+}
 
 function checkComments(input, markers, expected) {
-    var actual;
-    actual = solution(input, markers);
-    return Test.expect(actual === expected, "Returned '" + actual + "' but expected '" + expected + "'");
-};
+    var actual
+    actual = solution(input, markers)
+    return Test.expect(actual === expected, "Returned '" + actual + "' but expected '" + expected + "'")
+}
 
 checkComments("apples, plums % and bananas\npears\noranges !applesauce", ["%", "!"], "apples, plums\npears\noranges")
 checkComments("Q @b\nu\ne -e f g", ["@", "-"], "Q\nu\ne")

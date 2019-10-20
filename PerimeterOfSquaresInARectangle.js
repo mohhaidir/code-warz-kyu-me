@@ -29,6 +29,16 @@ function perimeter(n) {
     }
     return result * 4
 }
+// <<<=== sortest solution === >>>
+/*
+function perimeter(n) {
+    let arr = [1, 1];
+    for (let i = 0; i < n - 1; i++) {
+        arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+    }
+    return 4 * arr.reduce((sum, num) => sum + num, 0);
+}
+*/
 
 console.log(perimeter(0), 4)
 console.log(perimeter(5), 80)

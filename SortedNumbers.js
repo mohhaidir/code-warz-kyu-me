@@ -23,7 +23,14 @@ function solution(nums) {
         return nums
     }
 }
-
+// <<<=== another solution ===>>>
+/*
+function solution(nums) {
+    return nums !== null ? nums.sort(function (a, b) {
+        return a - b
+    }) : [];
+}
+*/
 console.log(solution(null), '[]')
 console.log(solution([]), '[]')
 console.log(solution([20, 2, 10]), '[2, 10, 20]')

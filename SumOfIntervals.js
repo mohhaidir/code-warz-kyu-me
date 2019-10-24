@@ -75,6 +75,38 @@ function sumIntervals(intervals) {
     return retArr.length;
 }
 */
+/*
+function sumIntervals(intervals) {
+    var consolidated = [],
+        expand = 0,
+        sum = 0,
+        i, length, n, nlength;
+    for (i = 0, length = intervals.length; i < length; i++) {
+        expand = 0;
+        for (n = 0, nlength = consolidated.length; n < nlength; n++) {
+            if (intervals[i][0] >= consolidated[n][0] && intervals[i][1] >= consolidated[n][1] &&
+                intervals[i][0] <= consolidated[n][1]) {
+                consolidated[n][1] = intervals[i][1];
+                expand = 1;
+                break;
+            } else if (intervals[i][0] <= consolidated[n][0] && intervals[i][1] <= consolidated[n][1] && intervals[i][1] >= consolidated[n][0]) {
+                consolidated[n][0] = intervals[i][0];
+                expand = 1;
+                break;
+            } else if (intervals[i][0] >= consolidated[n][0] && intervals[i][1] <= consolidated[n][1]) {
+                expand = 1;
+            }
+        }
+        if (0 === expand) {
+            consolidated.push(intervals[i]);
+        }
+    }
+    for (i = 0, length = consolidated.length; i < length; i++) {
+        sum += consolidated[i][1] - consolidated[i][0];
+    }
+    return sum;
+}
+*/
 var test1 = [
     [1, 5]
 ]

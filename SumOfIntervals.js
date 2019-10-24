@@ -63,7 +63,18 @@ function sumIntervals(intervals) {
     }
     return counter
 }
-
+// <<<=== another solution ===>>>
+/*
+function sumIntervals(intervals) {
+    var retArr = [];
+    for (i = 0; i < intervals.length; i++) {
+        for (j = intervals[i][0] + 1; j <= intervals[i][1]; j++) {
+            if (retArr.indexOf(j) == -1) retArr.push(j);
+        }
+    }
+    return retArr.length;
+}
+*/
 var test1 = [
     [1, 5]
 ]

@@ -47,7 +47,23 @@ function removeZeros(array) {
     }
     return array
 }
-
+/*
+function removeZeros(array) {
+    var limit = array.length;
+    var tmp;
+    for (var i = 0; i < limit; i++) {
+        if (array[i] === 0 || array[i] === '0') {
+            tmp = array[i];
+            for (var j = i--; j < array.length - 1; j++) {
+                array[j] = array[j + 1];
+            }
+            array[array.length - 1] = tmp;
+            limit--;
+        }
+    }
+    return array;
+}
+*/
 var input = [7, 2, 3, 0, 4, 6, 0, 0, 13, 0, 78, 0, 0, 19, 14],
     solution = [7, 2, 3, 4, 6, 13, 78, 19, 14, 0, 0, 0, 0, 0, 0];
 

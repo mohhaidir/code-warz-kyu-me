@@ -25,7 +25,22 @@ var bowlingScore = function (rolls) {
     }
     return totalScore
 }
-
+// <<<=== add new solution ===>>>
+/*
+var bowlingScore = function (rolls) {
+    var score = 0,
+        i = 0,
+        frame = 1;
+    while (frame <= 10) {
+        score += rolls[i] + rolls[i + 1];
+        if (rolls[i] + rolls[i + 1] >= 10) score += rolls[i + 2];
+        if (rolls[i] !== 10) i++;
+        i++;
+        frame++;
+    }
+    return score;
+}
+*/
 console.log(0 == bowlingScore([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
 console.log(190 == bowlingScore([9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9, 1, 9]))
 console.log(300 == bowlingScore([10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]))

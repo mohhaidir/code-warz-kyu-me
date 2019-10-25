@@ -19,6 +19,6 @@ function sortGiftCode(code) {
     return code.split('').sort().join('')
 }
 
-Test.assertEquals(sortGiftCode('abcdef'), 'abcdef');
-Test.assertEquals(sortGiftCode('pqksuvy'), 'kpqsuvy');
-Test.assertEquals(sortGiftCode('zyxwvutsrqponmlkjihgfedcba'), 'abcdefghijklmnopqrstuvwxyz');
+console.log(sortGiftCode('abcdef'), 'abcdef');
+console.log(sortGiftCode('pqksuvy'), 'kpqsuvy');
+console.log(sortGiftCode('zyxwvutsrqponmlkjihgfedcba'), 'abcdefghijklmnopqrstuvwxyz');

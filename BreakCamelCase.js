@@ -6,6 +6,7 @@ solution('camelCasing') // => should return 'camel Casing'
 */
 
 // complete the function
+
 function solution(string) {
     console.log(string)
     var str = string.split('')
